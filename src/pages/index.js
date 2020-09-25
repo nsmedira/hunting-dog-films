@@ -1,21 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import dogSilhouette from "../videos/dog-silhouette.mp4"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="background-video-container">
+      <video id="background-video" autoPlay muted loop>
+        <source src={dogSilhouette} type="video/mp4"/>
+      </video>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <div class="content">
+      <h1>Welcome to Hunting Dog Films</h1>
+      <p>Lorem ipsum...</p>
+      {/* Use a button to pause/play the video with JavaScript */}
+      <button id="myBtn" onclick="myFunction()">Pause</button>
+    </div>
   </Layout>
 )
 
