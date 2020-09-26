@@ -7,6 +7,7 @@ const Header = ({ siteTitle }) => (
     style={{
       background: `transparent`,
       marginBottom: `1.45rem`,
+      marginTop: "8vh"
     }}
   >
     <div
@@ -16,10 +17,14 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ 
-        textAlign: "center"        
+      <h1 
+        id="site-title" 
+        className="hunting-dog-font" 
+        style={{ 
+          textAlign: "center"        
         // margin: 0,
-      }}>
+        }}
+      >
         <Link
           to="/"
           style={{
