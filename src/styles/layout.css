@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+
+  /* 9.26.20: BEST PRACTICE: SET FONT IN HTML TO 100% AND THEN ALL OTHER FONTS TO RELATIVE SIZEE */
+  font-size: 100%
+
 }
 body {
   margin: 0;
@@ -639,4 +645,43 @@ pre tt:after {
 #myBtn:hover {
   background: #ddd;
   color: black;
+}
+
+#site-title { 
+  font-size: 8vw ;
+}
+
+.hunting-dog-font {
+  font-family: 'Amatic SC', cursive ;
+}
+
+.fixed-footer {
+  position: fixed ;
+  bottom: 0 ;
+  height: 75px ;
+  width: 100% ;
+  background-color: transparent ;
+  color: white;
+  font-size: 2vw ;
+}
+
+.social-icons {
+  float: right
+}
+
+.social-icons li {
+  list-style: none ;
+  margin-right: 15px ;
+  display: inline-block ;
+  padding: 20px 20px ;
+  transition: .5s
+}
+
+.social-icons li a {
+  color: white
+}
+
+.social-icons li a:hover {
+  color: whitesmoke ;
+  transition: .5s
 }
