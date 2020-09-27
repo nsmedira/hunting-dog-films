@@ -9,10 +9,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+// COMPONENTS
 import Header from "./header"
 import Footer from "./footer"
+
+// VIDEO
 import dogSilhouette from "../../videos/dog-silhouette.mp4"
+
+// CSS
 import "../../styles/layout.css"
+import "../../styles/materialize.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,7 +36,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
-          // margin: `0 auto`,
+          margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
         }}
@@ -42,8 +48,8 @@ const Layout = ({ children }) => {
         </div>
 
         <main>{children}</main>
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }
