@@ -621,14 +621,26 @@ pre tt:after {
   z-index: -100;
 }
 
-/* Add some content at the bottom of the video/page */
-.content {
-  position: fixed;
-  bottom: 0;
+.coming-soon-container {
+  margin-top: 100px ;
+}
+
+.coming-soon {
   background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
+  color: white ;
+  text-align: center;
+}
+
+.coming-soon h1 {
+  font-size: 5vw
+}
+
+.coming-soon h2 {
+  font-size: 3vw
+}
+
+.coming-soon h3 {
+  font-size: 2vw
 }
 
 /* Style the button used to pause/play the video */
@@ -652,7 +664,7 @@ pre tt:after {
 }
 
 .hunting-dog-font {
-  font-family: 'Amatic SC', cursive ;
+  font-family: 'Amatic SC', cursive !important;
 }
 
 .fixed-footer {
