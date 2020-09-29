@@ -20,7 +20,7 @@ import dogSilhouette from "../../videos/dog-silhouette.mp4"
 import "../../styles/layout.css"
 import "../../styles/materialize.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,11 +33,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header 
+        siteTitle={data.site.siteMetadata?.title || `Title`} 
+        pathname={location.pathname}
+      />
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: "90%",
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
