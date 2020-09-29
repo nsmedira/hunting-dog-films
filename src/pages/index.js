@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Layout from "../components/layout/layout"
+import { Link } from 'gatsby'
 import SEO from "../components/seo"
 import M from 'materialize-css'
 
@@ -10,7 +10,7 @@ const IndexPage = () => {
   })
 
   return (  
-    <Layout>
+    <>
       <SEO title="Home" />
 
       {/* <div class="content">
@@ -22,6 +22,25 @@ const IndexPage = () => {
       <div className="container">
 
         <div className="coming-soon">
+
+          <h1 
+            id="site-title" 
+            className="hunting-dog-font" 
+            style={{ 
+              textAlign: "center"        
+            // margin: 0,
+            }}
+          >
+            <Link
+              to="/"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              Hunting Dog Films
+            </Link>
+          </h1>
 
           <div className="row">
             <div className="col s12">
@@ -67,7 +86,7 @@ const IndexPage = () => {
 
       </div>
 
-    </Layout>
+    </>
   )
 }
 
