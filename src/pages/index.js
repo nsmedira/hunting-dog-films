@@ -40,11 +40,24 @@ const IndexPage = () => {
           {/* ENTER EMAIL FOR UPDATES */}
           <div className="row">
             <form className="col s12">
-              <div class="row">
+              <div className="row">
                 <h3 className="hunting-dog-font">Enter your email for updates about the tour!</h3>
-                <div class="input-field col s12">
-                  <input id="email" type="email" class="validate" />
-                  <label htmlFor="email">Enter your email</label>
+                <div className="input-field col s12">
+                  <input 
+                    id="email" 
+                    type="email" 
+                    className="validate hunting-dog-font" 
+                    style={{
+                      color: "white" ,
+                      fontSize: "3rem"
+                    }}/>
+                  <label 
+                    htmlFor="email" 
+                    className="hunting-dog-font"
+                    style={{
+                      fontSize: "1rem"
+                    }}
+                  >Enter your email</label>
                 </div>
               </div>
             </form>
