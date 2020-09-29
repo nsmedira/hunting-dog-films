@@ -629,6 +629,8 @@ pre tt:after {
   background: rgba(0, 0, 0, 0.5);
   color: white ;
   text-align: center;
+  margin-top: 100px ;
+  padding: 1.45rem 1.0875rem ;
 }
 
 .coming-soon h1 {
