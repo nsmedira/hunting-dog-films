@@ -33,25 +33,16 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <video id="background-video" autoPlay muted loop>
+        <source src={dogSilhouette} type="video/mp4"/>
+      </video>
       <Header 
         siteTitle={data.site.siteMetadata?.title || `Title`} 
         pathname={location.pathname}
       />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: "90%",
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <div className="background-video-container">
-          <video id="background-video" autoPlay muted loop>
-            <source src={dogSilhouette} type="video/mp4"/>
-          </video>
-        </div>
-
-        <main>{children}</main>
-      </div>
+      <main className="main-div">
+        {children}
+      </main>
       <Footer />
     </>
   )
