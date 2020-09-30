@@ -1,5 +1,3 @@
-// THE NAVBAR COMPONENT IS NOT GOING TO HAVE STATE. CAN JUST BE A FUNCTIONAL COMPONENT INSTEAD OF A CLASS COMPONENT
-
 import React, { useEffect } from 'react' ;
 import { Link } from 'gatsby' ;
 import NavList from './nav_list'
@@ -7,24 +5,14 @@ import M from 'materialize-css'
 
 const Navbar = ({pathname}) => {
 
-	// using this article to update state in this component
-	// https://ourcodeworld.com/articles/read/409/how-to-update-parent-state-from-child-component-in-react
-
-	// componentDidMount() {	
-	// 	document.addEventListener('DOMContentLoaded', function() {
-	// 		let options = {closeOnClick: true}
-	// 		let elems = document.querySelectorAll('.sidenav')
-	// 		M.Sidenav.init(elems, options)
-	// 	})
-	// }
-
 	useEffect(() => {
+
 		let options = {closeOnClick: true}
 		let elems = document.querySelectorAll('.sidenav')
 		M.Sidenav.init(elems, options)
+
 	})
 
-	
 	return (
 		
 		<div>
