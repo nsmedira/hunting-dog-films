@@ -596,6 +596,7 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -630,19 +631,60 @@ pre tt:after {
   color: white ;
   text-align: center;
   margin-top: 100px ;
+  /* margin-bottom: 100px ; */
   padding: 1.45rem 1.0875rem ;
+} 
+
+@media screen and (max-width: 1000px) {
+  
+  .coming-soon {
+    margin-top: 50px
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  
+  .coming-soon {
+    margin-top: 40px
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  
+  .coming-soon {
+    margin-top: 30px
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  
+  .coming-soon {
+    margin-top: 20px
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  
+  .coming-soon {
+    margin-top: 10px
+  }
+
 }
 
 .coming-soon h1 {
-  font-size: 5vw
+  font-size: 4rem
 }
 
 .coming-soon h2 {
-  font-size: 3vw
+  font-size: 3rem
 }
 
 .coming-soon h3 {
-  font-size: 2vw
+  font-size: 2rem
 }
 
 /* Style the button used to pause/play the video */
@@ -676,7 +718,8 @@ pre tt:after {
   width: 100% ;
   background-color: transparent ;
   color: white;
-  font-size: 2vw ;
+  font-size: 2rem ;
+  margin-top: 1.45rem ;
 }
 
 .social-icons {
@@ -698,4 +741,58 @@ pre tt:after {
 .social-icons li a:hover {
   color: whitesmoke ;
   transition: .5s
+}
+
+@media screen and (max-width: 465px) {
+  
+  .brand-logo {
+    font-size: 2.5rem !important
+  }
+
+}
+
+@media screen and (max-width: 390px) {
+  
+  .brand-logo {
+    font-size: 2rem !important
+  }
+
+}
+
+.paragraph {
+  text-align: justify ;
+  /* font-size: 1.5rem ; */
+}
+
+/* label color */
+.input-field label {
+  color: white !important ;
+}
+
+/* label focus color */
+.input-field input[type=email]:focus + label {
+  color: white !important ;
+}
+
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid white !important ;
+  box-shadow: 0 1px 0 0 white !important ;
+}
+
+@media (max-width: 767px) {
+
+  #background-video {
+      display: none;
+  }
+  body {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('./images/pointer.jpeg') no-repeat center center fixed;
+    background-size: cover ;
+  }
+
+}
+
+.main-div {
+  overflow: scroll ;
+  height: calc(100vh - 200px)
 }
