@@ -1,23 +1,12 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from 'gatsby'
 import SEO from "../components/seo"
-import M from 'materialize-css'
 
 const IndexPage = () => {
-
-  useEffect(() => {
-    M.AutoInit()
-  })
 
   return (  
     <>
       <SEO title="Home" />
-
-      {/* <div class="content">
-        <h1>Welcome to Hunting Dog Films</h1>
-        <p>Lorem ipsum...</p>
-        <button id="myBtn" onclick="myFunction()">Pause</button>
-      </div> */}
 
       <div className="container">
 
