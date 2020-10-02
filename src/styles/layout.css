@@ -8,7 +8,8 @@ html {
   overflow-y: scroll;
 
   /* 9.26.20: BEST PRACTICE: SET FONT IN HTML TO 100% AND THEN ALL OTHER FONTS TO RELATIVE SIZEE */
-  font-size: 100%
+  font-size: 100% ;
+  --hunting-dog-font: 'Amatic SC', cursive !important ;
 
 }
 body {
@@ -703,12 +704,12 @@ pre tt:after {
   color: black;
 }
 
-#site-title { 
-  font-size: 8vw ;
+.site-title { 
+  font-size: 8vw !important ;
 }
 
 .hunting-dog-font {
-  font-family: 'Amatic SC', cursive !important;
+  font-family: var(--hunting-dog-font) ;
 }
 
 .fixed-footer {
@@ -765,17 +766,17 @@ pre tt:after {
 }
 
 /* label color */
-.input-field label {
+.index .input-field label {
   color: white !important ;
 }
 
 /* label focus color */
-.input-field input[type=email]:focus + label {
+.index .input-field input[type=email]:focus + label {
   color: white !important ;
 }
 
 /* label underline focus color */
-.input-field input[type=email]:focus {
+.index .input-field input[type=email]:focus {
   border-bottom: 1px solid white !important ;
   box-shadow: 0 1px 0 0 white !important ;
 }
@@ -795,4 +796,16 @@ pre tt:after {
 .main-div {
   overflow: scroll ;
   height: calc(100vh - 200px)
+}
+
+.info h2 {
+  font-family: var(--hunting-dog-font) ;
+  text-align: center ;
+  font-size: 3rem ;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
