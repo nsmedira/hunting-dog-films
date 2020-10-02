@@ -13,9 +13,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 
-// VIDEO
-import dogSilhouette from "../../videos/dog-silhouette.mp4"
-
 // CSS
 import "../../styles/layout.css"
 import "../../styles/materialize.css"
@@ -33,9 +30,6 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <video id="background-video" autoPlay muted loop>
-        <source src={dogSilhouette} type="video/mp4"/>
-      </video>
       <Header 
         siteTitle={data.site.siteMetadata?.title || `Title`} 
         pathname={location.pathname}
