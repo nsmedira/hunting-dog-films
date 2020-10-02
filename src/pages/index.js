@@ -1,6 +1,10 @@
 import React from "react"
-import { Link } from 'gatsby'
+
+// COMPONENTS
 import SEO from "../components/seo"
+
+// VIDEO
+import dogSilhouette from "../videos/dog-silhouette.mp4"
 
 const IndexPage = () => {
 
@@ -8,34 +12,19 @@ const IndexPage = () => {
     <>
       <SEO title="Home" />
 
-      <div className="container">
+      <video id="background-video" autoPlay muted loop>
+        <source src={dogSilhouette} type="video/mp4"/>
+      </video>
+
+      <div className="container index">
 
         <div className="coming-soon">
-
-          <h1 
-            id="site-title" 
-            className="hunting-dog-font" 
-            style={{ 
-              textAlign: "center"        
-            // margin: 0,
-            }}
-          >
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
-              Hunting Dog Films
-            </Link>
-          </h1>
 
           <div className="row">
             <div className="col s12">
               <h2 className="hunting-dog-font">Coming soon to a city near you:</h2>
               <h1 
-                className="hunting-dog-font"
+                className="hunting-dog-font site-title"
                 // style={{
                 //   marginBottom: 0,
                 // }}
