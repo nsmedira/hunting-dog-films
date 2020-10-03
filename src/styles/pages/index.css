@@ -1,0 +1,102 @@
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+  
+.coming-soon-container {
+    margin-top: 100px ;
+}
+  
+.coming-soon {
+    background: rgba(0, 0, 0, 0.5);
+    color: white ;
+    text-align: center;
+    margin-top: 100px ;
+    /* margin-bottom: 100px ; */
+    padding: 1.45rem 1.0875rem ;
+} 
+  
+@media screen and (max-width: 1000px) {
+    
+    .coming-soon {
+      margin-top: 50px
+    }
+  
+}
+  
+@media screen and (max-width: 800px) {
+    
+    .coming-soon {
+      margin-top: 40px
+    }
+  
+}
+  
+@media screen and (max-width: 700px) {
+    
+    .coming-soon {
+      margin-top: 30px
+    }
+  
+}
+  
+@media screen and (max-width: 600px) {
+    
+    .coming-soon {
+      margin-top: 20px
+    }
+  
+}
+  
+@media screen and (max-width: 500px) {
+    
+    .coming-soon {
+      margin-top: 10px
+    }
+  
+}
+  
+.coming-soon h1 {
+    font-size: 4rem
+}
+  
+.coming-soon h2 {
+    font-size: 3rem
+}
+  
+.coming-soon h3 {
+    font-size: 2rem
+}
+
+@media (max-width: 767px) {
+
+    #background-video {
+        display: none;
+    }
+    
+    .body-index {
+      background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../../images/pointer.jpeg') no-repeat center center fixed;
+      background-size: cover ;
+    }
+  
+}
+
+/* label color */
+.index .input-field label {
+    color: white !important ;
+}
+  
+/* label focus color */
+.index .input-field input[type=email]:focus + label {
+    color: white !important ;
+}
+  
+/* label underline focus color */
+.index .input-field input[type=email]:focus {
+    border-bottom: 1px solid white !important ;
+    box-shadow: 0 1px 0 0 white !important ;
+}

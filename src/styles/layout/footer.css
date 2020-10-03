@@ -1,0 +1,38 @@
+.fixed-footer {
+    position: fixed ;
+    bottom: 0 ;
+    height: 75px ;
+    width: 100% ;
+    font-size: 2rem ;
+    margin-top: 1.45rem ;
+    color: white;
+}
+
+.footer-index {
+    background-color: transparent ;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.5) ;
+}
+
+.social-icons {
+    float: right
+}
+
+.social-icons li {
+    list-style: none ;
+    margin-right: 15px ;
+    display: inline-block ;
+    padding: 20px 20px ;
+    transition: .5s
+}
+
+.social-icons li a {
+    color: white
+}
+
+.social-icons li a:hover {
+    color: whitesmoke ;
+    transition: .5s
+}
