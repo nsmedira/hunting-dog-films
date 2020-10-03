@@ -8,6 +8,9 @@ import SEO from "../components/seo"
 // import jager from "../videos/jager.mp4"
 import dogSilhouette from "../videos/dog-silhouette.mp4"
 
+// CSS
+import "../styles/pages/index.css"
+
 const IndexPage = () => {
 
   return (  
