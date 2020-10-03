@@ -2,7 +2,7 @@
  * SEO component that queries for data with
  *  Gatsby's useStaticQuery React hook
  *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
 import React from "react"
@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+import defaultMetaImage from '../images/favicon.png'
+
+function SEO({ description, lang, meta, title, image, path }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +21,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteURL
           }
         }
       }
@@ -26,7 +29,9 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const siteURL = site.siteMetadata.siteURL
+  const imageURL = siteURL + ( image || defaultMetaImage ) 
+  const titleSiteConcat = `${title !== undefined ? title + ' | ' : '' }${site.siteMetadata.title}`
 
   return (
     <Helmet
@@ -34,7 +39,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -42,7 +47,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: titleSiteConcat,
         },
         {
           property: `og:description`,
@@ -53,23 +58,52 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: 'og:image',
+          content: imageURL
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: titleSiteConcat,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: 'twitter:site',
+          content: '@nsmedira'
+        },
+        {
+          name: 'viweport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          charset: 'utf-8'
+        },
+        {
+          name: 'theme-color',
+          content: '#2d728f' 
+        },
+        {
+          name: 'google',
+          content: 'nositelinksearchbox'
+        },
+        {
+          name: 'twitter:image',
+          content: imageURL
+        }
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={siteURL + path} />
+    </Helmet>
   )
 }
 
