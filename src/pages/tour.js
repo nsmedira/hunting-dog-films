@@ -5,7 +5,11 @@ const Tour = () => {
 
   return (  
     <>
-      <SEO title="Tour" />
+      <SEO 
+        title="Tour"
+        description={`Learn about the Hunting Dog Film tour and submit your film using our Film Submission Form.`}
+        path="/tour"
+      />
 
       <div className="container info">
 

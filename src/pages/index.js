@@ -15,7 +15,11 @@ const IndexPage = () => {
 
   return (  
     <>
-      <SEO title="Home" />
+    
+      <SEO 
+        title="Home" 
+        path="/"
+      />
 
       <Helmet>
         <body className="body-index" />

@@ -5,7 +5,12 @@ const About = () => {
 
   return (  
     <>
-      <SEO title="About" />
+
+      <SEO 
+        title="About"
+        description={`A bit about the Hunting Dog Film tour and its founder, Billy White.`}
+        path="/about"
+      />
 
       <div className="container">
 
