@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from 'react-helmet'
 
 // COMPONENTS
 import SEO from "../components/seo"
@@ -11,6 +12,10 @@ const IndexPage = () => {
   return (  
     <>
       <SEO title="Home" />
+
+      <Helmet>
+        <body className="body-index" />
+      </Helmet>
 
       <video id="background-video" autoPlay muted loop>
         <source src={dogSilhouette} type="video/mp4"/>
