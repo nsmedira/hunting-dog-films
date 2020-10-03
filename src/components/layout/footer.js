@@ -13,16 +13,8 @@ const Footer = ({pathname}) => {
     return (    
 
         <footer className={className}>
-            <p 
-                style={{
-                    position: "absolute", 
-                    top: "17px", 
-                    marginBottom: 0, 
-                    marginLeft: "15px"
-                }}
-            >
-                © {new Date().getFullYear()}, Hunting Dog Films, LLC
-            </p>
+            
+            <p>© {new Date().getFullYear()}, Hunting Dog Films, LLC</p>
             
             <ul className="social-icons">
                 
