@@ -14,7 +14,7 @@ import Header from "./header"
 import Footer from "./footer"
 
 // CSS
-import "../../styles/layout.css"
+import "../../styles/layout/layout.css"
 import "../../styles/materialize.css"
 
 const Layout = ({ children, location }) => {
@@ -37,7 +37,9 @@ const Layout = ({ children, location }) => {
       <main className="main-div">
         {children}
       </main>
-      <Footer />
+      <Footer 
+        pathname={location.pathname}
+      />
     </>
   )
 }
