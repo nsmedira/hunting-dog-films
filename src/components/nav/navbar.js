@@ -3,6 +3,9 @@ import { Link } from 'gatsby' ;
 import NavList from './nav_list'
 import M from 'materialize-css'
 
+// CSS
+import '../../styles/layout/navbar.css'
+
 const Navbar = ({pathname}) => {
 
 	useEffect(() => {
