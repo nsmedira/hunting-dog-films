@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import SEO from "../components/seo"
 
 // VIDEO
+// import jager from "../videos/jager.mp4"
 import dogSilhouette from "../videos/dog-silhouette.mp4"
 
 const IndexPage = () => {
@@ -18,7 +19,10 @@ const IndexPage = () => {
       </Helmet>
 
       <video id="background-video" autoPlay muted loop>
-        <source src={dogSilhouette} type="video/mp4"/>
+        <source 
+          src={dogSilhouette} 
+          type="video/mp4"
+        />
       </video>
 
       <div className="container index">
