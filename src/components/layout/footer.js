@@ -3,22 +3,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'gatsby'
 
-const Footer = () => (
+// CSS
+import "../../styles/layout/footer.css"
 
-    <footer className="fixed-footer hunting-dog-font">
-        <p style={{position: "absolute", top: "27px", marginBottom: 0, marginLeft: "15px"}}>© {new Date().getFullYear()}, Hunting Dog Films, LLC</p>
-        
-        <ul className="social-icons">
+const Footer = ({pathname}) => {
+
+    let className = `fixed-footer hunting-dog-font ${pathname === "/" ? "footer-index" : "footer"}`
+
+    return (    
+
+        <footer className={className}>
+            <p 
+                style={{
+                    position: "absolute", 
+                    top: "17px", 
+                    marginBottom: 0, 
+                    marginLeft: "15px"
+                }}
+            >
+                © {new Date().getFullYear()}, Hunting Dog Films, LLC
+            </p>
             
-            <li>
-                <Link to="https://www.instagram.com/huntingdogfilms/">
-                    <FontAwesomeIcon icon={faInstagram} size="1x"/>
-                </Link>
-            </li>
+            <ul className="social-icons">
+                
+                <li>
+                    <Link to="https://www.instagram.com/huntingdogfilms/">
+                        <FontAwesomeIcon icon={faInstagram} size="1x"/>
+                    </Link>
+                </li>
 
-        </ul>
+            </ul>
 
-    </footer>
-)
+        </footer>
+
+    )
+
+}
 
 export default Footer
