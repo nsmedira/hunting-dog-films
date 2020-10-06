@@ -10,38 +10,30 @@ const FilmSubmissionForm = () => {
   
     const handleSubmit = async (e) => {
 
+        // i added this
         e.persist()
 
-        console.log('handleSubmit called')
-
         e.preventDefault();
+        const formData = new FormData(e.target.value);
 
-        console.log('e = ', e)
-
-        // const formData = new FormData(e.target.value);
-        const formData = email
-
-        console.log(formData)
-
-        try {
-            const res = await fetch(baseURL, {
-                method: 'post',
-                body: formData,
-                headers: {
-                    accept: 'application/json',
-                },
-            });
-            setEmail('');
-            const json = await res.json();
-            if (json.status === 'success') {
-                setStatus('SUCCESS');
-                return;
-            }
-        } catch (err) {
-            setStatus('ERROR');
-        }
-
-        console.log(status)
+        // try {
+        //     const res = await fetch(baseURL, {
+        //         method: 'post',
+        //         body: formData,
+        //         headers: {
+        //             accept: 'application/json',
+        //         },
+        //     });
+        //     setEmail('');
+        //     const json = await res.json();
+        //     if (json.status === 'success') {
+        //         setStatus('SUCCESS');
+        //         return;
+        //     }
+        // } catch (err) {
+        //     setStatus('ERROR');
+        // }
+        
     };
   
     const handleInputChange = (e) => {
