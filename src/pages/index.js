@@ -53,7 +53,7 @@ const IndexPage = ({location}) => {
               <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
               <div data-element="fields" class="seva-fields formkit-fields">
                 <div 
-                  className="input-field col s6 offset-s2 formkit-field"
+                  className="input-field col s12 m8 l6 offset-l2 formkit-field"
                   style={{marginTop: 0}}
                 >
                   <input 
@@ -76,17 +76,19 @@ const IndexPage = ({location}) => {
                     Enter your email
                   </label>
                 </div>
-                <div className="col s2">
-                  <button 
-                    className="btn waves-effect waves-light" 
-                    data-element="submit"
-                    // form="film-submission-form" 
-                    // type="submit" 
-                    // name="action"
-                  >
-                    Submit
-                    <i className="material-icons right">send</i>
-                  </button>
+                <div className="col s12 m4 l2">
+                  <div className="center">
+                    <button 
+                      className="btn waves-effect waves-light" 
+                      data-element="submit"
+                      // form="film-submission-form" 
+                      // type="submit" 
+                      // name="action"
+                    >
+                      Submit
+                      <i className="material-icons right">send</i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
