@@ -1,8 +1,8 @@
 import React from "react"
 
 // COMPONENTS
-import SEO from "../components/seo"
-import FilmSubmissionForm from '../components/film-submission-form.js'
+import SEO from "../../components/seo"
+import FilmSubmissionForm from '../../components/film-submission-form.js'
 
 const Tour = () => {
 
