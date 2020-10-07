@@ -2,45 +2,6 @@ import React, { useState } from 'react'
 
 const FilmSubmissionForm = () => {
 
-    const [email, setEmail] = useState('');
-    const [status, setStatus] = useState(null);
-  
-    // your generated URL here //
-    const baseURL = `https://app.convertkit.com/forms/1720634/subscriptions`;
-  
-    const handleSubmit = async (e) => {
-
-        // i added this
-        e.persist()
-
-        e.preventDefault();
-        const formData = new FormData(e.target.value);
-
-        // try {
-        //     const res = await fetch(baseURL, {
-        //         method: 'post',
-        //         body: formData,
-        //         headers: {
-        //             accept: 'application/json',
-        //         },
-        //     });
-        //     setEmail('');
-        //     const json = await res.json();
-        //     if (json.status === 'success') {
-        //         setStatus('SUCCESS');
-        //         return;
-        //     }
-        // } catch (err) {
-        //     setStatus('ERROR');
-        // }
-        
-    };
-  
-    const handleInputChange = (e) => {
-      const { value } = e.target;
-      setEmail(value);
-    };
-
     return (
 
         <div className="row">
@@ -61,83 +22,126 @@ const FilmSubmissionForm = () => {
           {/* SUBMISSION FORM */}
           <div className="col s12 m5">
 
+            <h2>Submit Your Film!</h2>
+
+            <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
             <form 
-                id="film-submission-form"
-                method="post"
-                action="https://app.convertkit.com/forms/1720634/subscriptions"
-                onSubmit={handleSubmit}
+              id="film-submission-form"
+
+              // copied from create kit embed
+              action="https://app.convertkit.com/forms/1720634/subscriptions"
+              className="seva-form formkit-form"
+              method="post"
+              data-sv-form="1720634"
+              data-uid="f2d112bf1f"
+              data-format="inline"
+              data-version="5"
+              data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
             >
 
-              <h2>Submit Your Film!</h2>
-  
-              <div className="row">
-                <div className="input-field col s6">
-                  <input id="first_name" type="text" className="validate" />
-                  <label for="first_name">First Name</label>
-                </div>
-                <div className="input-field col s6">
-                  <input id="last_name" type="text" className="validate" />
-                  <label for="last_name">Last Name</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="input-field col s12">
-                  <input id="phone" type="tel" className="validate" />
-                  <label for="phone">Phone</label>
-                </div>
-              </div>
-  
-              <div className="row">
-                <div className="input-field col s12">
-                    <input 
-                        id="email" 
-                        type="email" 
+              {/* from create kit */}
+              <div data-style="full">
+                <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                <div data-element="fields" className="seva-fields formkit-fields">
+
+                  <div className="row">
+                    <div className="input-field col s6">
+                      <input 
+                        id="first_name" 
+                        type="text" 
+                        className="validate formkit-input" 
+                        name="fields[first_name]"
+                      />
+                      <label htmlFor="first_name">First Name</label>
+                    </div>
+                    <div className="input-field col s6">
+                      <input 
+                        id="last_name" 
+                        type="text" 
+                        className="validate"
+                        name="fields[last_name]"
+                      />
+                      <label htmlFor="last_name">Last Name</label>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="input-field col s12">
+                      <input 
+                        id="phone" 
+                        type="tel" 
                         className="validate" 
-                        onChange={handleInputChange}
-                        value={email}
-                        required 
-                    />
-                  <label for="email">Email</label>
+                        name="fields[phone]"
+                      />
+                      <label htmlFor="phone">Phone</label>
+                    </div>
+                  </div>
+      
+                  <div className="row">
+                    <div className="input-field col s12">
+                        <input 
+                            id="email" 
+                            type="email" 
+                            className="validate" 
+                            name="email_address"
+                            required 
+                        />
+                      <label htmlFor="email">Email</label>
+                    </div>
+                  </div>
+      
+                  <div className="row">
+                    <div className="input-field col s12">
+                      <input 
+                        id="website-url" 
+                        type="text" 
+                        className="validate" 
+                        name="fields[website_url]"
+                      />
+                      <label htmlFor="website-url">Website URL</label>
+                    </div>
+                  </div>
+      
+                  <div className="row">
+                    <div className="input-field col s12">
+                      <input 
+                        id="submission-url" 
+                        type="text" 
+                        className="validate" 
+                        name="fields[submission_url]"
+                      />
+                      <label htmlFor="submission-url">Submission Link</label>
+                    </div>
+                  </div>
+      
+                  <div className="row">
+                    <div className="input-field col s12">
+                      <input 
+                        id="password" 
+                        type="password" 
+                        className="validate" 
+                        name="fields[video_submission_password]"
+                      />
+                      <label htmlFor="password">Video Submission Password</label>
+                    </div>
+                  </div>
                 </div>
-              </div>
-  
-              <div className="row">
-                <div className="input-field col s12">
-                  <input id="website-url" type="text" className="validate" />
-                  <label for="website-url">Website URL</label>
+
+                <div className="center">
+                  <button 
+                    className="btn waves-effect waves-light" 
+                    data-element="submit"
+                    // form="film-submission-form" 
+                    // type="submit" 
+                    // name="action"
+                  >
+                    Submit
+                    <i className="material-icons right">send</i>
+                  </button>
                 </div>
-              </div>
-  
-              <div className="row">
-                <div className="input-field col s12">
-                  <input id="submission-url" type="text" className="validate" />
-                  <label for="submission-url">Submission Link</label>
-                </div>
-              </div>
-  
-              <div className="row">
-                <div className="input-field col s12">
-                  <input id="password" type="password" className="validate" />
-                  <label for="password">Video Submission Password</label>
-                </div>
+
               </div>
 
             </form>
-
-            <div className="center">
-              <button 
-                class="btn waves-effect waves-light" 
-                form="film-submission-form" 
-                type="submit" 
-                name="action"
-              >
-                Submit
-                <i class="material-icons right">send</i>
-              </button>
-            </div>
-
-            {status === 'SUCCESS' && <p>Thank you for your submission. Please check your email for confirmation and instructions for next steps.</p>}
-            {status === 'ERROR' && <p>Oops, Something went wrong! please try again.</p>}
 
           </div>
 
