@@ -107,6 +107,7 @@ const FilmSubmissionForm = () => {
                         id="submission-url" 
                         type="text" 
                         className="validate" 
+                        required
                         name="fields[submission_url]"
                       />
                       <label htmlFor="submission-url">Submission Link</label>
