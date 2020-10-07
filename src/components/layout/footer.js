@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'gatsby'
 
 // CSS
 import "../../styles/layout/footer.css"
@@ -19,9 +18,9 @@ const Footer = ({pathname}) => {
             <ul className="social-icons">
                 
                 <li>
-                    <Link to="https://www.instagram.com/huntingdogfilms/">
+                    <a href="https://www.instagram.com/huntingdogfilms/">
                         <FontAwesomeIcon icon={faInstagram} size="1x"/>
-                    </Link>
+                    </a>
                 </li>
 
             </ul>
