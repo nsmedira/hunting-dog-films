@@ -35,16 +35,19 @@ const IndexPage = ({location}) => {
   
   } else {
 
+    const formID = process.env.GATSBY_HOME_FORM_ID
+    const formUID = process.env.GATSBY_HOME_FORM_UID
+
     emailSignUp = (
       <>
         <h3 className="hunting-dog-font">Enter your email for updates about the tour!</h3>
         <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
         <form 
-          action="https://app.convertkit.com/forms/1725009/subscriptions"
+          action={`https://app.convertkit.com/forms/${formID}/subscriptions`}
           className="col s12 seva-form formkit-form"
           method="post"
-          data-sv-form="1725009"
-          data-uid="7614219ba9"
+          data-sv-form={formID}
+          data-uid={formUID}
           data-format="inline"
           data-version="5"
           data-options='{"settings":{"after_subscribe":{"action":"redirect","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":"https://huntingdogfilms.com/?signup=success"},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
