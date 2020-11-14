@@ -6,7 +6,9 @@ import SEO from "../components/seo"
 
 // VIDEO
 // import jager from "../videos/jager.mp4"
-import dogSilhouette from "../videos/dog-silhouette.mp4"
+// import dogSilhouette from "../videos/dog-silhouette.mp4"
+import licensedDogs from "../videos/licensed-dogs.mp4"
+
 
 // CSS
 import "../styles/pages/index.css"
@@ -113,7 +115,7 @@ const IndexPage = ({location}) => {
 
       <video id="background-video" autoPlay muted loop>
         <source 
-          src={dogSilhouette} 
+          src={licensedDogs} 
           type="video/mp4"
         />
       </video>
